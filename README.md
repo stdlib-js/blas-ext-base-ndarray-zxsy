@@ -60,7 +60,7 @@ This API is a specialized version of the package [`@stdlib/blas-ext/base/ndarray
 ## Usage
 
 ```javascript
-import zxsy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-zxsy@esm/index.mjs';
+import zxsy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-zxsy@v0.0.0-esm/index.mjs';
 ```
 
 #### zxsy( arrays )
@@ -113,7 +113,7 @@ The function has the following parameters:
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import Complex128Vector from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-vector-complex128@esm/index.mjs';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
-import zxsy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-zxsy@esm/index.mjs';
+import zxsy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-zxsy@v0.0.0-esm/index.mjs';
 
 var opts = {
     'dtype': 'float64'
