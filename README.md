@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Subtract elements of an output one-dimensional double-precision complex floating-point ndarray from the corresponding elements in an input one-dimensional double-precision complex floating-point ndarray and assign the results to the output ndarray.
+> Subtract the elements of an output one-dimensional double-precision complex floating-point ndarray from the corresponding elements in an input one-dimensional double-precision complex floating-point ndarray and assign the results to the output ndarray.
 
 <section class="intro">
 
@@ -53,14 +53,32 @@ This API is a specialized version of the package [`@stdlib/blas-ext/base/ndarray
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-ext-base-ndarray-zxsy
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import zxsy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-zxsy@esm/index.mjs';
+var zxsy = require( '@stdlib/blas-ext-base-ndarray-zxsy' );
 ```
 
 #### zxsy( arrays )
@@ -68,7 +86,7 @@ import zxsy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-zx
 Subtracts the elements of an output one-dimensional double-precision complex floating-point ndarray from the corresponding elements in an input one-dimensional double-precision complex floating-point ndarray and assigns the results to the output ndarray.
 
 ```javascript
-import Complex128Vector from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-vector-complex128@esm/index.mjs';
+var Complex128Vector = require( '@stdlib/ndarray-vector-complex128' );
 
 var x = new Complex128Vector( [ 1.0, -2.0, 3.0, 4.0, -5.0, 6.0 ] );
 var y = new Complex128Vector( [ 2.0, 3.0, -4.0, 5.0, 6.0, -7.0 ] );
@@ -104,16 +122,11 @@ The function has the following parameters:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import Complex128Vector from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-vector-complex128@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
-import zxsy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-zxsy@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var Complex128Vector = require( '@stdlib/ndarray-vector-complex128' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var zxsy = require( '@stdlib/blas-ext-base-ndarray-zxsy' );
 
 var opts = {
     'dtype': 'float64'
@@ -127,10 +140,6 @@ console.log( ndarray2array( y ) );
 
 zxsy( [ x, y ] );
 console.log( ndarray2array( y ) );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -154,7 +163,7 @@ console.log( ndarray2array( y ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -217,7 +226,7 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-base-ndarray-zxsy/main/LICENSE
 
-[@stdlib/blas/ext/base/ndarray/zaxpby]: https://github.com/stdlib-js/blas-ext-base-ndarray-zaxpby/tree/esm
+[@stdlib/blas/ext/base/ndarray/zaxpby]: https://github.com/stdlib-js/blas-ext-base-ndarray-zaxpby
 
 </section>
 
