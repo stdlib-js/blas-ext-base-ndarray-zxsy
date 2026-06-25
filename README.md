@@ -60,6 +60,11 @@ This API is a specialized version of the package [`@stdlib/blas-ext/base/ndarray
 ## Usage
 
 ```javascript
+import zxsy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-zxsy@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-ext-base-ndarray-zxsy/tags). For example,
+
+```javascript
 import zxsy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-zxsy@v0.0.0-deno/mod.js';
 ```
 
@@ -108,7 +113,7 @@ The function has the following parameters:
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
 import Complex128Vector from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-vector-complex128@deno/mod.js';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
-import zxsy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-zxsy@v0.0.0-deno/mod.js';
+import zxsy from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-zxsy@deno/mod.js';
 
 var opts = {
     'dtype': 'float64'
