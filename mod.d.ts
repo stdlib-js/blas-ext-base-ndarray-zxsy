@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,11 +16,11 @@
 * limitations under the License.
 */
 
-#include "stdlib/blas/ext/base/ndarray/zxsy.h"
-#include "stdlib/blas/ext/base/zxsy.h"
-#include "stdlib/complex/float64/ctor.h"
-#include "stdlib/ndarray/ctor.h"
-#include "stdlib/blas/base/shared.h"
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { complex128ndarray } from '@stdlib/types/ndarray';
 
 /**
 * Subtracts the elements of an output one-dimensional double-precision complex floating-point ndarray from the corresponding elements in an input one-dimensional double-precision complex floating-point ndarray and assigns the results to the output ndarray.
@@ -32,20 +32,21 @@
 *     -   a one-dimensional input ndarray.
 *     -   a one-dimensional output ndarray.
 *
-* @param arrays    list containing ndarrays
+* @param arrays - array-like object containing ndarrays
+* @returns output ndarray
+*
+* @example
+* var Complex128Vector = require( '@stdlib/ndarray-vector-complex128' );
+*
+* var x = new Complex128Vector( [ 1.0, -2.0, 3.0, 4.0, -5.0, 6.0 ] );
+* var y = new Complex128Vector( [ 2.0, 3.0, -4.0, 5.0, 6.0, -7.0 ] );
+*
+* var out = zxsy( [ x, y ] );
+* // returns <ndarray>[ <Complex128>[ -1.0, -5.0 ], <Complex128>[ 7.0, -1.0 ], <Complex128>[ -11.0, 13.0 ] ]
 */
-void stdlib_blas_ext_zxsy( const struct ndarray *arrays[] ) {
-	const struct ndarray *x = arrays[ 0 ];
-	const struct ndarray *y = arrays[ 1 ];
+declare function zxsy( arrays: [ complex128ndarray, complex128ndarray ] ): complex128ndarray;
 
-	const CBLAS_INT N = stdlib_ndarray_dimension( x, 0 );
 
-	const CBLAS_INT strideX = stdlib_ndarray_stride_elements( x, 0 );
-	const CBLAS_INT offsetX = stdlib_ndarray_offset_elements( x );
-	const CBLAS_INT strideY = stdlib_ndarray_stride_elements( y, 0 );
-	const CBLAS_INT offsetY = stdlib_ndarray_offset_elements( y );
+// EXPORTS //
 
-	const stdlib_complex128_t *dataX = (const stdlib_complex128_t *)stdlib_ndarray_data( x );
-	stdlib_complex128_t *dataY = (stdlib_complex128_t *)stdlib_ndarray_data( y );
-	API_SUFFIX(stdlib_strided_zxsy_ndarray)( N, dataX, strideX, offsetX, dataY, strideY, offsetY );
-}
+export = zxsy;
